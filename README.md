@@ -1,0 +1,2 @@
+# quotera
+Text paraphrasing tool
