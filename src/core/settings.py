@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     ENV: str = "DEV"
 
     class Config:
-        env_file = os.getenv("ENV_FILE") or ".env.dev" or "parenv"
+        env_file = os.getenv("ENV_FILE") or ".env.dev"
 
 
 @lru_cache()
