@@ -1,4 +1,3 @@
-import torch
 from nltk.tokenize import sent_tokenize
 
 def create_paraphrase(parrot_model, text, adequacy_threshold = 0.75, fluency_threshold = 0.90, diversity_ranker="levenshtein"):

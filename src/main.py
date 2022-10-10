@@ -29,16 +29,16 @@ quotera.add_middleware(
 quotera.add_event_handler("startup", log_environment)
 
 
-def wyre_openapi():
+def quotera_openapi():
     if quotera.openapi_schema:
         return quotera.openapi_schema
     openapi_schema = get_openapi(title="Quotera API", version="", routes=quotera.routes,)
-    with open("openapi.json", "r") as openapi:
-        openapi = json.load(openapi)
-        logo = openapi["info"]["x-logo"]
-        description = openapi["info"]["description"]
-    openapi_schema["info"]["x-logo"] = logo
-    openapi_schema["info"]["description"] = description
+    #with open("openapi.json", "r") as openapi:
+    #    openapi = json.load(openapi)
+    #    logo = openapi["info"]["x-logo"]
+    #    description = openapi["info"]["description"]
+    #openapi_schema["info"]["x-logo"] = logo
+    #openapi_schema["info"]["description"] = description
 
     quotera.openapi_schema = openapi_schema
     return quotera.openapi_schema
@@ -70,4 +70,4 @@ quotera.middleware("http")(catch_exceptions_middleware)
 
 
 quotera.include_router(v1_router)
-quotera.openapi = wyre_openapi
+quotera.openapi = quotera_openapi

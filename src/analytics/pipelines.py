@@ -1,7 +1,5 @@
 from parrot import Parrot
-import torch
 import warnings
-from nltk.tokenize import sent_tokenize
 warnings.filterwarnings("ignore")
 
 from src.analytics.functions import *
