@@ -12,4 +12,5 @@ def create_paraphrase(parrot_model, text, adequacy_threshold = 0.75, fluency_thr
             kept_sentence = kept_sentence.capitalize()
             kept_sentence = kept_sentence+". "
             new_text = new_text + kept_sentence
+
     return new_text
