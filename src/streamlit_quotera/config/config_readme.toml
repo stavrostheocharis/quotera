@@ -1,0 +1,24 @@
+[app]
+app_intro = """
+This app allows you to paraphrase text, in just a few clicks.
+All you have to do is to paste your text and follow the guidelines in the sidebar to:
+* __Adjust the adequacy threshold__: How much of the meaning is preserved adequately.
+* __Adjust the fluency threshold__: How much of the paraphrased text will be fluent in English.
+* __Select diversity ranker__: Based on the different diversity ranker, how much has the paraphrase changed the original sentence (Lexical / Phrasal / Syntactical).
+
+"""
+[tooltips]
+adequacy_threshold = """
+Set a high number if you want to preserve the meaning.
+"""
+fluency_threshold = """
+Set a high number if you want to create a fluent new text.
+"""
+diversity_ranker = """
+* The __Levenshtein distance__ between two strings is defined as the minimum number of edits needed to transform one string into the other, with the allowable edit operations being insertion, deletion, or substitution of a single character.
+* The __Euclidian distance__ represents the length of a line segment between two points, which can be calculated by the Pythagorean Theorem. Therefore, in the NLP, these points are represented by words. The shorter the distance between the two texts is, the more similar they are.
+* __Diff__ compares sequences of lines of text, and produces human-readable differences or deltas. Differ uses SequenceMatcher both to compare sequences of lines, and to compare sequences of characters within similar (near-matching) lines.
+"""
+[links]
+repo = "https://github.com/stavrostheocharis/quotera"
+article = "https://medium.com/...."

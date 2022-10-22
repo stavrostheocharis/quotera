@@ -8,7 +8,7 @@ def deploy_streamlit():
         "streamlit",
         "run",
         f"{os.path.dirname(os.path.realpath(__file__))}/dashboard.py",
-        "--server.port=8080",
+        "--server.port=8060",
         "--server.address=0.0.0.0",
     ]
     sys.exit(cli.main())
