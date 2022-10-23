@@ -19,6 +19,13 @@ diversity_ranker = """
 * The __Euclidian distance__ represents the length of a line segment between two points, which can be calculated by the Pythagorean Theorem. Therefore, in the NLP, these points are represented by words. The shorter the distance between the two texts is, the more similar they are.
 * __Diff__ compares sequences of lines of text, and produces human-readable differences or deltas. Differ uses SequenceMatcher both to compare sequences of lines, and to compare sequences of characters within similar (near-matching) lines.
 """
+upload_choice = """
+* Check to load a text dataset.
+* Uncheck to just paste your text.
+"""
+text_upload = """
+Your txt file should have at least one sentence.
+"""
 [links]
 repo = "https://github.com/stavrostheocharis/quotera"
 article = "https://medium.com/...."

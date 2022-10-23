@@ -1,4 +1,3 @@
-
 import streamlit as st
 from typing import Tuple, Dict, Any
 import toml
@@ -52,3 +51,6 @@ def load_image(image_name: str) -> Image:
         Image to be displayed.
     """
     return Image.open(Path(get_project_root()) / f"references/{image_name}")
+
+
+    
