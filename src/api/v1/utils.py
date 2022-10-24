@@ -21,4 +21,9 @@ def get_transformations(
     transformed_fluency_threshold = transform_input_data(body.fluency_threshold)
     transformed_diversity_ranker = transform_input_data(body.diversity_ranker)
 
-    return transformed_text, transformed_adequacy_threshold, transformed_fluency_threshold, transformed_diversity_ranker
+    return (
+        transformed_text,
+        transformed_adequacy_threshold,
+        transformed_fluency_threshold,
+        transformed_diversity_ranker,
+    )

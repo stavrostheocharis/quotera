@@ -7,4 +7,3 @@ class TextIn(ItemBase):
     adequacy_threshold: float
     fluency_threshold: float
     diversity_ranker: str
-    

@@ -4,6 +4,7 @@ import toml
 from pathlib import Path
 from PIL import Image
 
+
 def get_project_root() -> str:
     """Returns project streamlit quotera path.
 
@@ -14,10 +15,9 @@ def get_project_root() -> str:
     """
     return str(Path(__file__).parent.parent)
 
+
 @st.cache(allow_output_mutation=True, ttl=300)
-def load_config(
-    config_readme_filename: str
-) -> Dict[Any, Any]:
+def load_config(config_readme_filename: str) -> Dict[Any, Any]:
     """Loads configuration files.
 
     Parameters
@@ -32,7 +32,9 @@ def load_config(
     dict
         Readme configuration file.
     """
-    config_readme = toml.load(Path(get_project_root()) / f"config/{config_readme_filename}")
+    config_readme = toml.load(
+        Path(get_project_root()) / f"config/{config_readme_filename}"
+    )
     return dict(config_readme)
 
 
@@ -51,6 +53,3 @@ def load_image(image_name: str) -> Image:
         Image to be displayed.
     """
     return Image.open(Path(get_project_root()) / f"references/{image_name}")
-
-
-    

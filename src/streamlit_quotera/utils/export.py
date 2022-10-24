@@ -1,6 +1,7 @@
 from typing import Any, Dict, List
 import streamlit as st
 
+
 def display_links(repo_link: str, article_link: str) -> None:
     """Displays an repository and app links.
 

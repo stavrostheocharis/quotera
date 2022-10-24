@@ -32,13 +32,17 @@ quotera.add_event_handler("startup", log_environment)
 def quotera_openapi():
     if quotera.openapi_schema:
         return quotera.openapi_schema
-    openapi_schema = get_openapi(title="Quotera API", version="", routes=quotera.routes,)
-    #with open("openapi.json", "r") as openapi:
+    openapi_schema = get_openapi(
+        title="Quotera API",
+        version="",
+        routes=quotera.routes,
+    )
+    # with open("openapi.json", "r") as openapi:
     #    openapi = json.load(openapi)
     #    logo = openapi["info"]["x-logo"]
     #    description = openapi["info"]["description"]
-    #openapi_schema["info"]["x-logo"] = logo
-    #openapi_schema["info"]["description"] = description
+    # openapi_schema["info"]["x-logo"] = logo
+    # openapi_schema["info"]["description"] = description
 
     quotera.openapi_schema = openapi_schema
     return quotera.openapi_schema

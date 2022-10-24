@@ -5,4 +5,3 @@ class ItemBase(BaseModel):
     """Base entity"""
 
     pass
-

@@ -21,4 +21,3 @@ class NotFoundError(Error):
 
 class BadRequestError(Error):
     pass
-

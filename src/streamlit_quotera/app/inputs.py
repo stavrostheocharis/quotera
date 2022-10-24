@@ -1,10 +1,9 @@
 import streamlit as st
 from typing import Tuple, Any, Dict
-from io import StringIO 
+from io import StringIO
 
-def input_text(
-    readme: Dict[Any, Any]
-) -> Tuple[str, Any]:
+
+def input_text(readme: Dict[Any, Any]) -> Tuple[str, Any]:
     """User decides whether to upload a txt file or paste text.
 
     Parameters
@@ -20,7 +19,7 @@ def input_text(
     load_options = dict()
     load_options["load_text"] = st.checkbox(
         "Load a text dataset", False, help=readme["tooltips"]["upload_choice"]
-    ) 
+    )
     if load_options["load_text"]:
         file = st.file_uploader(
             "Upload a txt file", type="txt", help=readme["tooltips"]["text_upload"]
@@ -33,8 +32,8 @@ def input_text(
             st.stop()
 
     else:
-        text = st.text_area('Please paste your text :', height=50)
-    
+        text = st.text_area("Please paste your text :", height=50)
+
     button = st.button("Paraphrase")
-    
+
     return text, button
