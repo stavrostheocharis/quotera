@@ -1,5 +1,3 @@
-#!./.venv/bin/python
-
 import os
 import typer
 from typing import Optional
@@ -12,7 +10,6 @@ app = typer.Typer()
 
 class Environment(str, Enum):
     dev = "dev"
-    test = "test"
     staging = "staging"
     production = "production"
 
