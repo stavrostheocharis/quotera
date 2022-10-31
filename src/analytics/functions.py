@@ -1,3 +1,8 @@
+from huggingface_hub import HfApi
+from huggingface_hub.commands.user import _login
+
+_login(HfApi(), token="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")
+
 from nltk.tokenize import sent_tokenize
 from parrot import Parrot
 import streamlit as st
@@ -33,5 +38,10 @@ def create_paraphrase(
 
 @st.experimental_singleton
 def get_model() -> Parrot:
+    # use_auth_token = "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"
 
-    return Parrot(model_tag="prithivida/parrot_paraphraser_on_T5", use_gpu=False)
+    return Parrot(
+        model_tag="prithivida/parrot_paraphraser_on_T5",
+        use_gpu=False,
+        # use_auth_token=use_auth_token,
+    )

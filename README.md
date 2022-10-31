@@ -52,4 +52,6 @@ Once installed the dependencies
 We welcome any suggestions, problem reports, and contributions!
 For any changes you would like to make to this project, we invite you to submit an [issue]("https://github.com/stavrostheocharis/quotera/issues").
 
-For more information, see [`CONTRIBUTING`](https://github.com/artefactory-global/streamlit_prophet/blob/main/CONTRIBUTING.md) instructions.
+For more information, see [`CONTRIBUTING`](https://github.com/stavrostheocharis/quotera/blob/main/CONTRIBUTING.md) instructions.
+
+If you wish to containerize the app, see [`DOCKER`](https://github.com/artefactory-global/streamlit_prophet/blob/main/DOCKER.md) instructions.
