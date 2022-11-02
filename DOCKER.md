@@ -2,46 +2,16 @@
 
 ## Installation
 
-To create Docker you need to run:
+To create the Docker images you need to have installed Docker and run:
 
 ```bash
-make docker
+docker-compose up
 ```
 
-which is equivalent to:
+## Info
 
-```bash
-make docker VERSION=latest
-```
+For the purpose of this repository two services are included into the docker-compose.yml
+This means that two corresponding dockerfiles exist. One for the API service and one for the 
+Streamlit one.
 
-You could also provide name and version for the image itself.
-Default name is `IMAGE := streamlit_prophet`.
-Default version is `VERSION := latest`.
-
-```bash
-make docker IMAGE=some_name VERSION=0.1.0
-```
-
-## Usage
-
-```bash
-docker run -it --rm \
-   -v $(pwd):/workspace \
-   streamlit_prophet bash
-```
-
-## How to clean up
-
-To uninstall docker image run `make clean_docker` with `VERSION`:
-
-```bash
-make clean_docker VERSION=0.1.0
-```
-
-like in installation, you can also choose the image name
-
-```bash
-make clean_docker IMAGE=some_name VERSION=latest
-```
-
-If you want to clean all, including `build` run `make clean`
+In the end two docker images are being built, one for each service.

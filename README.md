@@ -54,4 +54,4 @@ For any changes you would like to make to this project, we invite you to submit 
 
 For more information, see [`CONTRIBUTING`](https://github.com/stavrostheocharis/quotera/blob/main/CONTRIBUTING.md) instructions.
 
-If you wish to containerize the app, see [`DOCKER`](https://github.com/artefactory-global/streamlit_prophet/blob/main/DOCKER.md) instructions.
+If you wish to containerize the app, see [`DOCKER`](https://github.com/stavrostheocharis/quotera/blob/main/DOCKER.md) instructions.
