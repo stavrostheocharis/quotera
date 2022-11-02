@@ -37,12 +37,6 @@ def quotera_openapi():
         version="",
         routes=quotera.routes,
     )
-    # with open("openapi.json", "r") as openapi:
-    #    openapi = json.load(openapi)
-    #    logo = openapi["info"]["x-logo"]
-    #    description = openapi["info"]["description"]
-    # openapi_schema["info"]["x-logo"] = logo
-    # openapi_schema["info"]["description"] = description
 
     quotera.openapi_schema = openapi_schema
     return quotera.openapi_schema

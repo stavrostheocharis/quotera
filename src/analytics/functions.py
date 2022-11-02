@@ -38,10 +38,8 @@ def create_paraphrase(
 
 @st.experimental_singleton
 def get_model() -> Parrot:
-    # use_auth_token = "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"
 
     return Parrot(
         model_tag="prithivida/parrot_paraphraser_on_T5",
         use_gpu=False,
-        # use_auth_token=use_auth_token,
     )

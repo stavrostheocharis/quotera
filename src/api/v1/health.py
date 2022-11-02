@@ -7,7 +7,7 @@ health_router = APIRouter()
 @health_router.get(
     "/health",
     tags=["Health"],
-    summary="Health check the service",
+    summary="Health check of the service",
     response_description="Status of the service",
     response_model=HealthCheck,
 )

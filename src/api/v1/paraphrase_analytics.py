@@ -15,6 +15,7 @@ paraphrase_analytics_router = APIRouter()
 print("Loading model")
 parrot_model = get_model()
 
+
 @paraphrase_analytics_router.post(
     "/text/paraphrase",
     tags=["Text Paraphrase"],
@@ -23,16 +24,25 @@ parrot_model = get_model()
     response_model=TextOut,
 )
 async def paraphrase_text(body: TextIn):
-    """ 
+    """
     Use this route to paraphrase text.
     """
     start = time.time()
     logging.info("Triggering paraphrase pipeline")
-    transformed_text, transformed_adequacy_threshold, transformed_fluency_threshold, transformed_diversity_ranker = get_transformations(body)
+    (
+        transformed_text,
+        transformed_adequacy_threshold,
+        transformed_fluency_threshold,
+        transformed_diversity_ranker,
+    ) = get_transformations(body)
     logging.info("Processing & paraphrasing text")
 
-    paraphrased_text = create_paraphrase_text(parrot_model,
-        transformed_text, transformed_adequacy_threshold, transformed_fluency_threshold, transformed_diversity_ranker
+    paraphrased_text = create_paraphrase_text(
+        parrot_model,
+        transformed_text,
+        transformed_adequacy_threshold,
+        transformed_fluency_threshold,
+        transformed_diversity_ranker,
     )
     end = time.time()
     logging.info("Runtime of the program is {}".format(end - start))
