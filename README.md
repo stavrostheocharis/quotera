@@ -9,6 +9,7 @@
 Deploy a [Streamlit](https://streamlit.io/) app, or a [FastAPI](https://fastapi.tiangolo.com/) API to paraphrase text
 
 </div>
+
 ## Requirements
 ### Python version
 * Main supported version : <strong>3.9</strong> <br>
@@ -33,7 +34,7 @@ pip install -r requirements.txt
 
 ### How to use it
 
-As stated there are 2 ways using the Streamlit app, or the API.
+As stated there are 2 ways. You can use the Streamlit app, or the API.
 
 Once installed the dependencies
 - run the following command from CLI to open the app in the default web browser:
