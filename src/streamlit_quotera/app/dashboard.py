@@ -31,7 +31,7 @@ adequacy_threshold = st.sidebar.slider(
     0.0,
     1.0,
     step=0.01,
-    value=0.75,
+    value=0.90,
     help=readme["tooltips"]["adequacy_threshold"],
 )
 fluency_threshold = st.sidebar.slider(
