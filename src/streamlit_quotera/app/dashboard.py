@@ -1,17 +1,24 @@
 import streamlit as st
 from src.analytics.pipelines import create_paraphrase_text
-from src.analytics.functions import get_model
+from src.analytics.functions import get_model, read_txt_file
 from src.streamlit_quotera.utils.load import load_config, load_image
 from src.streamlit_quotera.utils.export import display_links
 from cards import *
 from inputs import input_text
+
+from huggingface_hub import HfApi
+from huggingface_hub.commands.user import _login
+
+token = read_txt_file("token.txt")
+_login(HfApi(), token=token)
+
 
 # Load config
 st.set_page_config(page_title="Quotera", layout="wide")
 readme = load_config("config_readme.toml")
 
 with st.spinner(
-    "Loading and geting ready the AI models (this action may take some time).."
+    "Loading and geting ready the AI models (this action may take some time)..."
 ):
     parrot_model = get_model()
 

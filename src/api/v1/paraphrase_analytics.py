@@ -9,10 +9,18 @@ import logging
 
 from src.api.v1.utils import *
 from src.analytics.pipelines import create_paraphrase_text
-from src.analytics.functions import get_model
+from src.analytics.functions import get_model, read_txt_file
+
+from huggingface_hub import HfApi
+from huggingface_hub.commands.user import _login
+
+logging.basicConfig(level=logging.NOTSET)
+
+token = read_txt_file("token.txt")
+_login(HfApi(), token=token)
 
 paraphrase_analytics_router = APIRouter()
-print("Loading model")
+logging.info("Loading model")
 parrot_model = get_model()
 
 

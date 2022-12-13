@@ -8,14 +8,16 @@ from fastapi.responses import JSONResponse
 import traceback
 from fastapi.openapi.utils import get_openapi
 import json
+import logging
 
+logging.basicConfig(level=logging.NOTSET)
 settings = get_settings()
 quotera = FastAPI(title=settings.APP_NAME)
 
 
 def log_environment():
     settings = get_settings()
-    print(f"LOG INFO: Environment: {settings.ENV}")
+    logging.info(f"LOG INFO: Environment: {settings.ENV}")
 
 
 quotera.add_middleware(
@@ -57,8 +59,7 @@ async def catch_exceptions_middleware(request: Request, call_next):
         return await call_next(request)
     except Exception as e:
         tb = traceback.format_exc()
-        print(tb)
-        print("ERROR INFO: ", e)
+        logging.info("Error information: ", e)
         return JSONResponse(
             status_code=500, content={"detail": str(e), "meta": "Internal server error"}
         )

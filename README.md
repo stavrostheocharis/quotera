@@ -32,6 +32,12 @@ To install dependencies run the command:
 pip install -r requirements.txt
 ```
 
+### Paraphrase models
+
+This implementation has taken into consideration AI models coming from [Hugging Face](https://huggingface.co/) (specifically the "prithivida/parrot_paraphraser_on_T5" in combination with the [Parrot_Paraphraser](https://github.com/PrithivirajDamodaran/Parrot_Paraphraser) package, but you can use other variations too). In order to run everything, an account and a token from Hugging Face are mandatory. In order to get everything ready, please read this [guide](https://huggingface.co/docs/hub/security-tokens).
+
+Once you have a token from Hugging Face, create a token.txt file in your quotera folder and paste it inside your token (it will automatically be used by the app).
+
 ### How to use it
 
 As stated there are 2 ways. You can use the Streamlit app, or the API.

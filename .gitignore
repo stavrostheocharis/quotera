@@ -129,3 +129,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Notebooks
+*.ipynb
+
+# Token
+token.txt
