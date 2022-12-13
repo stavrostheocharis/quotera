@@ -32,6 +32,11 @@ To install dependencies run the command:
 pip install -r requirements.txt
 ```
 
+Also for the parrot library run the command:
+
+```bash
+pip install git+https://github.com/PrithivirajDamodaran/Parrot_Paraphraser.git
+```
 ### Paraphrase models
 
 This implementation has taken into consideration AI models coming from [Hugging Face](https://huggingface.co/) (specifically the "prithivida/parrot_paraphraser_on_T5" in combination with the [Parrot_Paraphraser](https://github.com/PrithivirajDamodaran/Parrot_Paraphraser) package, but you can use other variations too). In order to run everything, an account and a token from Hugging Face are mandatory. In order to get everything ready, please read this [guide](https://huggingface.co/docs/hub/security-tokens).

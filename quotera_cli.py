@@ -17,13 +17,13 @@ class Environment(str, Enum):
 @app.command()
 def serve(env: Optional[Environment] = Environment.dev, host: str = "0.0.0.0"):
     typer.echo(f"\nRunning Quotera API | Environment: {env} 🚀 \n")
-    # check also dotmatrix
     typer.echo(cprint(figlet_format("Quotera", font="doom"), "green", attrs=["bold"]))
     os.system(
         f"ENV_FILE='.env.{env}' GUNICORN_CMD_ARGS='--keep-alive 0' uvicorn src.main:quotera --reload --host {host}"
     )
 
 
+# In case of need to run workers
 @app.command()
 def serve_gunicorn(
     env: Optional[Environment] = Environment.dev,
@@ -38,20 +38,19 @@ def serve_gunicorn(
 
 @app.command("venv")
 def create_venv():
-    typer.echo("\nCreating virtual environment 🍇")
+    typer.echo("\nCreating virtual environment...")
     os.system("python -m venv .venv")
     command = typer.style(
         "`source ./.venv/bin/activate`", fg=typer.colors.GREEN, bold=True
     )
-    typer.echo(f"\nActivate with: {command}. Happy coding 😁 \n")
+    typer.echo(f"\nActivate with: {command}.")
 
 
 @app.command()
 def install():
     # typer.echo("\nInstalling packages 🚀")
     os.system("pip install -r requirements.txt ")
-    typer.echo(f"\nPackages installed. Have fun 😁 \n")
-    typer.echo(f"\nInstalling nltk parts. 😁 \n")
+    typer.echo(f"\nPackages installed")
 
 
 @app.command()
@@ -61,21 +60,6 @@ def test(watch: bool = False):
         os.system("ENV_FILE='.env.test' ptw")
         return
     os.system("ENV_FILE='.env.test' pytest")
-
-
-@app.command()
-def test_runner():
-    typer.echo("\nTesting gitlab-runner 🚀")
-    os.system("gitlab-runner exec docker api")
-
-
-@app.command()
-def docker_build(push: bool = False):
-    typer.echo("\nBuilding docker image 🚀")
-    os.system("docker build -t registry.gitlab.com/wysely/api:latest .")
-    if push:
-        typer.echo("\nPushing docker image 🚀")
-        os.system("docker push registry.gitlab.com/wysely/api:latest")
 
 
 @app.command("activate")

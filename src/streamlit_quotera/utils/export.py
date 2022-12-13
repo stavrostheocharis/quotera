@@ -3,7 +3,7 @@ import streamlit as st
 
 
 def display_links(repo_link: str, article_link: str) -> None:
-    """Displays an repository and app links.
+    """Displays a repository and app links.
 
     Parameters
     ----------

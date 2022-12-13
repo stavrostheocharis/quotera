@@ -2,6 +2,7 @@ from nltk.tokenize import sent_tokenize
 from parrot import Parrot
 import streamlit as st
 from fuzzywuzzy import fuzz
+import re
 from typing import List
 import logging
 
@@ -58,8 +59,8 @@ def create_paraphrase(
     """
     Creates the new paraphrased text
     """
-    logging.info("Tokenising text.........")
-    sentences = list(sent_tokenize(text))
+    logging.info("Spliting to sentences.........")
+    sentences = re.split("[,.!?;]", text)
     new_text = ""
     logging.info("Creating paraphrased text for each sentence.........")
     for sentence in sentences:
