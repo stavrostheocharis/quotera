@@ -67,3 +67,6 @@ For any changes you would like to make to this project, we invite you to submit 
 For more information, see [`CONTRIBUTING`](https://github.com/stavrostheocharis/quotera/blob/main/CONTRIBUTING.md) instructions.
 
 If you wish to containerize the app, see [`DOCKER`](https://github.com/stavrostheocharis/quotera/blob/main/DOCKER.md) instructions.
+
+## References
+1. [How To Create an End-2-End Text Paraphrase App](https://medium.com/towards-artificial-intelligence/how-to-create-an-end-2-end-text-paraphrase-app-db83a4e05918)
