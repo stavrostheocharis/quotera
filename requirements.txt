@@ -92,7 +92,7 @@ tokenizers==0.12.1
 toml==0.10.2
 tomli==2.0.1
 toolz==0.12.0
-torch==1.12.1
+torch==1.13.1
 torchvision==0.13.1
 tornado==6.2
 tqdm==4.64.1
