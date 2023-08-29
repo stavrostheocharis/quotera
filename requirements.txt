@@ -20,7 +20,7 @@ fastapi==0.85.1
 filelock==3.8.0
 fuzzywuzzy==0.18.0
 gitdb==4.0.9
-GitPython==3.1.29
+GitPython==3.1.32
 h11==0.14.0
 httptools==0.5.0
 huggingface-hub==0.10.0
